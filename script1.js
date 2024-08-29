@@ -18,30 +18,40 @@ form.addEventListener('submit', (e) => {
 
     if (name === '' || name <= 5) {
         document.getElementById('errorMessages').innerHTML='Please enter your name atleast 5 character';
+    }else{
+        document.getElementById('errorMessages').innerHTML='';
     }
 
     if (email === '') {
         document.getElementById('errorMessages1').innerHTML='Please enter your email address';
-    } else if (!validateEmail(email)) {
+    }  if (!validateEmail(email)) {
         document.getElementById('errorMessages1').innerHTML='Please enter a valid email address';
+    }else{
+        document.getElementById('errorMessages1').innerHTML='';
     }
 
     if (phone === '') {
         document.getElementById('errorMessages2').innerHTML='Please enter your phone number';
-    } else if (!validatePhone(phone)) {
+    }  if (!validatePhone(phone)) {
         document.getElementById('errorMessages2').innerHTML='Please enter a valid phone number';
+    }else{
+        document.getElementById('errorMessages2').innerHTML='';
     }
 
     if (password === '') {
         document.getElementById('errorMessages3').innerHTML='Please enter your password';
-    } else if (password.length < 8) {
+    }  if (password.length < 8) {
        document.getElementById('errorMessages3').innerHTML='Password must be at least 8 characters long';
+    }else{
+        document.getElementById('errorMessages3').innerHTML='';
     }
 
     if (confirmPassword === '') {
         document.getElementById('errorMessages4').innerHTML='Please confirm your password';
-    } else if (confirmPassword !== password) {
+    }  if (confirmPassword !== password) {
         document.getElementById('errorMessages4').innerHTML='Passwords do not match';
+    }else{
+        document.getElementById('errorMessages4').innerHTML='';
     }
 
     if (errors.length > 0) {
